@@ -1,0 +1,237 @@
+/* Reset default styles and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container styling */
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Subtitle styling */
+.container p {
+    color: #636e72;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Form styling */
+#bmiForm {
+    margin-bottom: 2rem;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Input field styling */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+/* Input focus styling */
+input[type="number"]:focus {
+    border-color: #74b9ff;
+    box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.1);
+}
+
+/* Button styling */
+#calculateBtn {
+    width: 100%;
+    background: linear-gradient(135deg, #00b894, #00a085);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effect */
+#calculateBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+/* Button active effect */
+#calculateBtn:active {
+    transform: translateY(0);
+}
+
+/* Result section styling */
+.result-section {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: none; /* Hidden by default */
+}
+
+/* Result section visible state */
+.result-section.show {
+    display: block;
+}
+
+/* BMI value display */
+.bmi-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+}
+
+/* BMI category display */
+.bmi-category {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Error message styling */
+.error-message {
+    background: #ff7675;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: none; /* Hidden by default */
+}
+
+/* Error message visible state */
+.error-message.show {
+    display: block;
+}
+
+/* BMI reference section */
+.bmi-reference {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f1f2f6;
+    border-radius: 8px;
+}
+
+.bmi-reference h3 {
+    color: #2d3436;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.bmi-reference ul {
+    list-style: none;
+}
+
+.bmi-reference li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* BMI category colors */
+.underweight {
+    color: #74b9ff;
+    font-weight: bold;
+}
+
+.normal {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.overweight {
+    color: #fdcb6e;
+    font-weight: bold;
+}
+
+.obese {
+    color: #e84393;
+    font-weight: bold;
+}
+
+/* BMI category background colors for results */
+.bmi-category.underweight {
+    background: #74b9ff;
+    color: white;
+}
+
+.bmi-category.normal {
+    background: #00b894;
+    color: white;
+}
+
+.bmi-category.overweight {
+    background: #fdcb6e;
+    color: #2d3436;
+}
+
+.bmi-category.obese {
+    background: #e84393;
+    color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .bmi-value {
+        font-size: 1.5rem;
+    }
+    
+    .bmi-category {
+        font-size: 1rem;
+    }
+}
